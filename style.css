@@ -1,0 +1,132 @@
+/* Standard-Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    color: black;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Dark Mode Button */
+#dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffcc00;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Titel und Datum */
+h1 {
+    font-size: 28px;
+}
+
+#datetime {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Fortschrittsüberschrift */
+h2 {
+    color: #4CAF50;
+}
+
+/* Buttons für Übungen */
+.exercise-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px auto;
+}
+
+.exercise-btn:hover {
+    background-color: #45a049;
+}
+
+/* Fortschrittsbalken */
+progress {
+    width: 200px;
+    height: 10px;
+    display: block;
+    margin: 5px auto;
+}
+
+/* Kamera-Container */
+#camera-container {
+    margin-top: 20px;
+}
+
+/* Live-Kamerabild */
+#camera-feed {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #4CAF50;
+}
+
+/* Diagramm-Container */
+#exerciseChart {
+    max-width: 60%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+/* Flexbox für Buttons & Balken */
+#exercise-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sticky Button-Leiste */
+.sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sticky-bar .exercise-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sticky-bar .exercise-btn:hover {
+    background-color: #45a049;
+}

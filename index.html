@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Fitness Coach</title>
+
+    <!-- Chart.js einbinden -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS-Datei einbinden -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Dark Mode Button -->
+    <button id="dark-mode-toggle">Dark Mode</button>
+
+    <div class="container">
+        <!-- Logo -->
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Fitness Coach Logo" class="logo">
+
+        <h1>AR FITNESS COACH</h1>
+        <p id="datetime"></p>
+
+        <!-- Fortschrittsübersicht -->
+        <h2>Dein Fortschritt</h2>
+        <div class="chart-container">
+            <canvas id="exerciseChart"></canvas>
+        </div>
+
+        <!-- Live-Fitness-Daten -->
+        <h2>Live-Fitness-Daten</h2>
+        <div id="exercise-data">
+            <p><strong>Kniebeugen:</strong> <span id="kniebeugen">0</span></p>
+            <progress id="progress-kniebeugen" value="0" max="20"></progress>
+
+            <p><strong>Squats:</strong> <span id="squats">0</span></p>
+            <progress id="progress-squats" value="0" max="20"></progress>
+
+            <p><strong>Liegestütze:</strong> <span id="liegestuetze">0</span></p>
+            <progress id="progress-liegestuetze" value="0" max="20"></progress>
+
+            <p><strong>Sit-ups:</strong> <span id="situps">0</span></p>
+            <progress id="progress-situps" value="0" max="20"></progress>
+
+            <p><strong>Dehnungen:</strong> <span id="dehnungen">0</span></p>
+            <progress id="progress-dehnungen" value="0" max="20"></progress>
+        </div>
+
+        <!-- Kamera-Feed -->
+        <h2>Live-Kamera</h2>
+        <div id="camera-container">
+            <img id="camera-feed" src="{{ url_for('video') }}" alt="Live Kamera Feed">
+        </div>
+    </div>
+
+    <!-- Sticky Button-Leiste -->
+    <div class="sticky-bar">
+        <button class="exercise-btn" id="btn-kniebeugen">+1 Kniebeuge</button>
+        <button class="exercise-btn" id="btn-squats">+1 Squat</button>
+        <button class="exercise-btn" id="btn-liegestuetze">+1 Liegestütze</button>
+        <button class="exercise-btn" id="btn-situps">+1 Sit-up</button>
+        <button class="exercise-btn" id="btn-dehnungen">+1 Dehnung</button>
+    </div>
+
+    <!-- JavaScript-Datei -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
